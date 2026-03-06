@@ -218,19 +218,16 @@ async function GetSuggestedUsersController(req, res) {
 
     const currentUserId = req.user.id;
 
-    // Find all follow relations of current user
+    // Only exclude accepted and pending relations
     const relations = await followModel.find({
         follower: currentUserId,
         status: { $in: ["accepted", "pending"] }
     });
 
-    // Extract followee ids
     const excludedUserIds = relations.map(rel => rel.followee);
 
-    // Exclude current user also
     excludedUserIds.push(currentUserId);
 
-    // Find users not followed
     const suggestedUsers = await userModel.find({
         _id: { $nin: excludedUserIds }
     })

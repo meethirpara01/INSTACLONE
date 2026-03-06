@@ -14,6 +14,8 @@ export const usePost = () => {
         setLoading(true);
 
         const data = await getFeed();
+        console.log(data);
+        
 
         setFeed(data.posts);
         setLoading(false);
