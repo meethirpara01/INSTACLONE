@@ -25,7 +25,7 @@ const CreatePost = () => {
         const file = postImageInputFeildRef.current.files[0];
 
         await handleCreatePost(file, caption);
-        navigate("/");
+        navigate("/home");
     }
 
     if (loading) {

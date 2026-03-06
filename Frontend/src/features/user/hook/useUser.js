@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { UserContext } from "../user.context";
-import { acceptReq, followersList, followingList, followUser, pendingReq, rejectReq, suggesteduserList, unfollowUser } from "../services/user.api";
+import { acceptReq,  followersList,  followingList, followUser, pendingReq, rejectReq, suggesteduserList, unfollowUser } from "../services/user.api";
 
 export const useUser = () => {
     const context = useContext(UserContext);

@@ -1,6 +1,8 @@
 import "../style/followers.scss"
 
 const Followers = ({follower}) => {
+    console.log(follower);
+    
 
     return (
         <div className="users">
