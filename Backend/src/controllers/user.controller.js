@@ -220,7 +220,8 @@ async function GetSuggestedUsersController(req, res) {
 
     // Find all follow relations of current user
     const relations = await followModel.find({
-        follower: currentUserId
+        follower: currentUserId,
+        status: { $in: ["accepted", "pending"] }
     });
 
     // Extract followee ids
