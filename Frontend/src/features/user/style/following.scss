@@ -1,0 +1,35 @@
+.users {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+            width: 2rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .follow-button {
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        background: white;
+        color: #111;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}

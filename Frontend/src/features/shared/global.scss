@@ -1,0 +1,43 @@
+@use "./button.scss";
+
+@font-face {
+    font-family: GilroyLight;
+    src: url(./font/Gilroy-Light.ttf);
+}
+
+@font-face {
+    font-family: GilroyThin;
+    src: url(./font//Gilroy-Thin.ttf);
+}
+
+@font-face {
+    font-family: GilroyUltraLight;
+    src: url(./font//Gilroy-UltraLight.ttf);
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url(./font//Gilroy-Medium.ttf);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    background-color: #1d1d1d;
+    color: whitesmoke;
+    font-family: GilroyLight;
+}
+
+a {
+    text-decoration: none;
+    color: #bd0c23;
+    cursor: pointer;
+    font-size: 1.2rem;
+}

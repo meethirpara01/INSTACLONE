@@ -1,0 +1,51 @@
+.users {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+            width: 2rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .btns {
+        display: flex;
+        gap: 0.5rem;
+
+        .follow-button {
+            border: none;
+            outline: none;
+            padding-inline: 1rem;
+            padding-block: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.8vw;
+            transition: all 0.3s ease-in-out;
+
+            &.follow-button {
+                background-color: #fff;
+                color: #111;
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(0.5);
+            }
+        }
+    }
+
+}
