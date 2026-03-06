@@ -9,7 +9,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: ["http://localhost:5173",
+        "https://instaclone-zdpc.onrender.com"]
 }));
 app.use(express.static("./public"));
 
