@@ -1,7 +1,7 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-
+const path = require("path");
 
 const app = express();
 
@@ -11,6 +11,7 @@ app.use(cors({
     credentials: true,
     origin: "http://localhost:5173"
 }));
+app.use(express.static("./public"));
 
 // REQUIRE ROUTES
 const authRoute = require("./routes/auth.routes");
@@ -22,5 +23,9 @@ const userRoute = require("./routes/user.routes");
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/users", userRoute);
+
+app.use("*name", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 module.exports = app;
