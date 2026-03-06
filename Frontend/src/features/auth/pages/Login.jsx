@@ -22,7 +22,7 @@ const Login = () => {
 
         console.log("User LoggedIn");
         console.log(user); // NULL - because setUser() does NOT update immediately
-        navigate("/");
+        navigate("/home");
     }
 
     if (loading) {
