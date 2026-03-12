@@ -2,8 +2,6 @@
 
 Instaclone – Full Stack Social Media Application
 
-Tech: Node.js, Express.js, MongoDB, React, JWT, Axios, ImageKit, Render
-
 Built a full-stack social media application supporting user authentication, post creation, likes, follow/unfollow, and follower request management.
 
 Designed a graph-style relationship system using edge collections in MongoDB to manage followers, following, and pending requests efficiently.
